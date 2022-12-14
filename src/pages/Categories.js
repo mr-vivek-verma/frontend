@@ -11,10 +11,12 @@ import CategoryForm from "../components/CategoryForm/CategoryForm"
 
 import Iconify from "../components/iconify/Iconify"
 import ImageUpload from '../components/ImageUploader/ImageUpload';
+import Popup from '../components/CategoryForm/Popup';
 // ----------------------------------------------------------------------
 
 export default function Categories() {
   const [openFilter, setOpenFilter] = useState(false);
+  const [openPopup,setOpenPopup] =useState(false)
 
   const handleOpenFilter = () => {
     setOpenFilter(true);
@@ -36,7 +38,7 @@ export default function Categories() {
         </Typography>
         <Typography sx={{display: "flex", justifyContent:" end", m:2}}>
       {/* <Button onClick={handleOpenFilter} sx={{background:"blue", color:"#ffff"}}>Create New</Button> */}
-      <Button onClick={handleCloseFilter} variant="contained" startIcon={<Iconify icon="eva:plus-fill" />}>
+      <Button onClick={()=>setOpenPopup(true)} variant="contained" startIcon={<Iconify icon="eva:plus-fill" />}>
             Create New
           </Button>
          
@@ -58,11 +60,19 @@ export default function Categories() {
 
         <ProductList products={PRODUCTS} />
         <ProductCartWidget /> */}
+      
       </Container>
       <Typography>
+      <Popup 
+       openPopup={openPopup}
+        setOpenPopup={setOpenPopup}
+      >
+        <CategoryForm/>
+      </Popup>
         {/* <CategoryForm/> */}
         {/* <ImageUpload/> */}
       </Typography>
+      
     </>
   );
 }
