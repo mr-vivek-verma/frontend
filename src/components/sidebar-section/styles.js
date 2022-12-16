@@ -9,13 +9,13 @@ export const StyledNavItem = styled((props) => <ListItemButton disableGutters {.
   height: 48,
   position: 'relative',
   textTransform: 'capitalize',
-  color: theme.palette.text.secondary,
+  color: theme.palette.text.secondary,  
   borderRadius: theme.shape.borderRadius,
 }));
 
 export const StyledNavItemIcon = styled(ListItemIcon)({
   width: 22,
-  height: 22,
+  height: 25,
   color: 'inherit',
   display: 'flex',
   alignItems: 'center',
