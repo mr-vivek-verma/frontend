@@ -158,7 +158,7 @@ export default function UserPage() {
           Product Management
           </Typography>
           <Button variant="contained" startIcon={<Iconify icon="eva:plus-fill" />}>
-            New User
+            Create New
           </Button>
         </Stack>
 

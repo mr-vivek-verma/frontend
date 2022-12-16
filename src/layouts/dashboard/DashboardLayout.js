@@ -4,7 +4,7 @@ import { Outlet } from 'react-router-dom';
 import { styled } from '@mui/material/styles';
 //
 import Header from './header';
-import Nav from './nav';
+import Nav from './sidebar';
 
 // ----------------------------------------------------------------------
 
